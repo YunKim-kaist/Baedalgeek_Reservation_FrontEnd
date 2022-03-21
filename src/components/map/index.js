@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./map.module.css";
 import DaumPostcode from "react-daum-postcode";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PopupDom from "../popupdom";
 import PopupPostCode from "../popuppostcode";
 import map from "../../img/map.png"
@@ -40,11 +40,35 @@ const Restaurant = () => {
         
     };
 
-    const [isLivingAlone, setIsLivingAlone] = useState(false);
+    const [currentClick, setCurrentClick] = useState(null);
+    const [prevClick, setPrevClick] = useState(null);
 
-    const OpenLivingAlone = () => {
-        setIsLivingAlone(true);
-    }
+    const GetClick = (e) => {
+        setCurrentClick(e.target.id);
+        console.log(e.target.id);
+      };
+
+    useEffect(
+        (e) => {
+            if (currentClick !== null) {
+                let current = document.getElementById(currentClick);
+                current.style.backgroundColor = "#96A0FF";
+                current.style.border = "#754581"
+                current.style.boxShadow = "0px 0px 10px 4px gray";
+              }
+        
+              if (prevClick !== null) {
+                let prev = document.getElementById(prevClick);
+                prev.style.backgroundColor = "#CDD1FF";
+                prev.style.border = "#96A0FF"
+                prev.style.boxShadow = "0px 0px 5px 2px gray";
+              }
+              setPrevClick(currentClick);
+            },
+            [currentClick]
+    );
+
+
 
 
     const [isName, setIsName] = useState('');
@@ -71,7 +95,7 @@ const Restaurant = () => {
     }
 
     const handleSubmit = () => {
-        console.log(isLivingAlone);
+        console.log(currentClick)
         console.log(isAddress);
         console.log(isName);
         console.log(isNumber);
@@ -92,8 +116,8 @@ const Restaurant = () => {
         <div className = {styles.map_body}>
             <div className = {styles.header1}>현재 자취를 하고 계신가요?</div>
             <div>
-                <button className={styles.b1} onClick = {OpenLivingAlone}>예</button>
-                <button className={styles.b2}>아니요</button>
+                <button id = "liveAlone" className={styles.b1} onClick = {GetClick}>예</button>
+                <button id = "notLiveAlone" className={styles.b2} onClick = {GetClick}>아니요</button>
             </div>
             <div className = {styles.header2_1}>배달음식을 주문한다면 수령하실 주소를</div>
             <div className = {styles.header2_2}>입력해주세요!</div>
