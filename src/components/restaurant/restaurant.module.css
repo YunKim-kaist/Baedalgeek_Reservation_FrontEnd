@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Gamja+Flower&family=Jua&family=Nanum+Pen+Script&display=swap");
+
+.res_body{
+    text-align: center;
+}
+.image_body{
+    margin-top: 3vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border: 10px solid #96A0FF;
+    align-items: center;
+    box-shadow: 0px 0px 20px 7px gray;
+    border-radius: 4%;
+    width: 90%;
+    background-color: #FBFBFF;
+}
+.header{
+    margin-top: 2vh;
+    font-size: 6.2vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+}
+.h1{
+    padding-bottom: 0.8vh;
+}
+.container{
+    margin-top: 3vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 8vw;
+    margin-bottom: 3vh;
+}
+.textline{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom:0.5vh;
+}
+.l{
+    padding-bottom: 0.5vh;
+}
+.item{
+    border: 5px solid gray;
+    box-shadow: 0px 0px 10px 3px gray;
+    border-radius: 5%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 24vw;
+    height: 24vw;
+
+}
+.input{
+    width: 85%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1.5vh;
+    height: 6vh;
+    font-size: 5vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    border: 1px solid black;
+    margin-bottom: 3vh;
+}
+.submit{
+    margin-top: 2vh;
+    width: 15%;
+    height: 4vh;
+    font-size: 5vw;
+    margin-bottom: 2vh;
+    background-color: #CDD1FF;
+    border: 2px solid #96A0FF;
+    border-radius: 6%;
+    box-shadow: 0px 0px 5px 2px gray;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;
+}
+.button{
+    width: 30%;
+    height: 6vh;
+    font-size: 6vw;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5.3vh;
+    background-color: #CDD1FF;
+    border: 2px solid #96A0FF;
+    border-radius: 6%;
+    box-shadow: 0px 0px 5px 2px gray;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;
+}

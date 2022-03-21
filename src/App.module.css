@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Nanum+Pen+Script&display=swap");
+
+.header{
+    font-size: 8vw;
+    color:black;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-style: solid;
+    border-top-width: 0.4vh;
+    border-bottom-width: 0.3vh;
+    background-color: #CDD1FF;
+    border-color: #96A0FF;
+    text-shadow: 6px 2px 2px #96A0FF;
+    font-family: 'jua', sans-serif;    
+}
+
+/* .body{
+    text-align: center;
+}
+
+.slogan{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 10vw;
+    font-weight: bold;
+    font-family: 'Nanum Pen Script', cursive;
+
+}
+
+.giveaway{
+    font-size: 5vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-radius: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border: 5px solid #96A0FF;
+    box-shadow: 0px 0px 20px 7px gray;
+    padding-bottom: 3vh;
+    
+}
+.giveaway_headline{
+    padding-top: 2vh;
+    padding-bottom: 1.3vh;
+    font-size: 5.5vw;
+}
+.giveaway_headline0{
+    padding-bottom: 0.5vh;
+}
+.giveaway_mac{
+    padding-bottom: 3vh;
+}
+.giveaway_ipad{
+    width: 35%;
+    padding-right: 9vw;
+    padding-bottom: 10vh;
+}
+.giveaway_airpod{
+    width: 35%;
+    padding-left: 9vw;
+    padding-bottom: 10vh;
+}
+.ipadimage{
+    padding-left: 1vw;
+    padding-right: 6vw;
+}
+.airpodimage{
+    padding-left: 6vw;
+    padding-bottom: 3vw;
+} */
