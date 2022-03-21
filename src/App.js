@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import styles from "./App.module.css";
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
-
 import Giveaway from './components/giveaway';
 import Restaurant from './components/restaurant';
+import React from 'react';
 import Map from './components/map';
 const App = () => {
   const [data, setData] = useState("giveaway");
@@ -41,12 +40,6 @@ const App = () => {
   // })
 
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path = '/' element = {<Giveaway/>}/>
-    //     <Route exact path = '/restaurant' element= {<Restaurant/>}/>
-    //   </Routes>
-    // </BrowserRouter>
     <div>
     <header className={styles.header}>"배달의 혁신, 배달긱"</header>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
