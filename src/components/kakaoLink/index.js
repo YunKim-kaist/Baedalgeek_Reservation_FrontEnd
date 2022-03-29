@@ -94,9 +94,9 @@ const KakaoLink = () => {
         window.Kakao.Link.sendDefault({
         objectType: 'feed',
             content: {
-            title: "hello",
-            description: "내용!",
-            imageUrl: '{baedalgeek}',
+            title: "사전예약하고 맥북 에어 받자!!",
+            description: "서울대학교 사전예약",
+            imageUrl: '../../gift.png',
             link: {
                 mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
                 androidExecParams: "test",
