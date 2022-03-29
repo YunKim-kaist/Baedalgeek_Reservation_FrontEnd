@@ -81,6 +81,7 @@ const KakaoLink = () => {
     return(
         <KakaoShareButton onClick={handleKakaoButton}>
             <KakaoIcon src={kakaoLogo}></KakaoIcon>
+            <div>안녕하세요</div>
         </KakaoShareButton>
     );
 };
