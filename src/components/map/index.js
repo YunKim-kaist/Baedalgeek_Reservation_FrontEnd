@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import PopupDom from "../popupdom";
 import PopupPostCode from "../popuppostcode";
 import map from "../../img/map.png"
-const Restaurant = () => {
+const Map = ({setKakaoLink}) => {
     const postCodeStyle = {
         // display: "block",
         // position: "absolute",
@@ -103,6 +103,7 @@ const Restaurant = () => {
         if(isChecked === false){
             alert('개인정보 제공에 동의해주시기 바랍니다.');
         }
+        setKakaoLink();
     }
 
     // const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -182,4 +183,4 @@ const Restaurant = () => {
 };
 
 
-export default Restaurant;
+export default Map;

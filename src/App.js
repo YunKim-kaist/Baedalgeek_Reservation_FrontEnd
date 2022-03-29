@@ -5,6 +5,8 @@ import Giveaway from './components/giveaway';
 import Restaurant from './components/restaurant';
 import React from 'react';
 import Map from './components/map';
+import KakaoLink from './components/kakaoLink'
+
 const App = () => {
   const [data, setData] = useState("giveaway");
   
@@ -13,6 +15,9 @@ const App = () => {
   }
   const setMap = () => {
     setData("map")
+  }
+  const setKakaoLink = () =>{
+    setData("kakaoLink")
   }
   
   // const fetchUsers = async () => {
@@ -44,7 +49,8 @@ const App = () => {
     <header className={styles.header}>"배달의 혁신, 배달긱"</header>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
       {data === "restaurant" && (<Restaurant setMap = {setMap}/>)}
-      {data === "map" && (<Map/>)}
+      {data === "map" && (<Map setKakaoLink = {setKakaoLink}/>)}
+      {data === "kakaoLink" && (<KakaoLink/>)}
     </div>
   );
 
