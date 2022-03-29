@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import kakaoLogo from "../../img/kakao.png";
 
 const KakaoShareButton = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const KakaoShareButton = () => {
         content: {
           title: '타이틀',
           description: '#리액트 #카카오 #공유버튼',
-          imageUrl: 'IMAGE_URL', // i.e. process.env.FETCH_URL + '/logo.png'
+          imageUrl: '../../img/baedalgeek.png',
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
@@ -58,7 +59,7 @@ const KakaoShareButton = () => {
     <div className="kakao-share-button">
       {/* Kakao share button */}
       <button id="kakao-link-btn">
-        <img src="/icons/kakao.png" alt="kakao-share-icon" />
+        <img src= {kakaoLogo} alt="kakao-share-icon" />
       </button>
     </div>
   )

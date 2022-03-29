@@ -35,56 +35,55 @@ const KakaoLink = () => {
     //     </SearchBtn>
     // )
 
-    const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
-	const KakaoShareButton = styled.a`cursor: pointer;`;
-    const KakaoIcon = styled.img`
-        width: 48px;
-        height: 48px;
-        border-radius: 24px;
-    `;
-    const currentUrl = "https://yunkim-kaist.github.io/Reservation/";
-    // kakao sdk 초기화하기
-	// status가 변경될 때마다 실행되며, status가 ready일 때 초기화를 시도합니다.
-	useEffect(() => {
-		if (status === "ready" && window.Kakao) {
-			// 중복 initialization 방지
-			if (!window.Kakao.isInitialized()) {
-				// 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-				window.Kakao.init("4a4a3c7a7800e2a0af56d2d6455b429b");
-			}
-		}
-	}, [status]);	
-    const handleKakaoButton = () => {
-        window.Kakao.Link.sendScrap({
-            requestUrl: currentUrl,
-        });
-    };
+//     const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
+// 	const KakaoShareButton = styled.a`cursor: pointer;`;
+//     const KakaoIcon = styled.img`
+//         width: 48px;
+//         height: 48px;
+//         border-radius: 24px;
+//     `;
+//     const currentUrl = "https://yunkim-kaist.github.io/Reservation/";
+//     // kakao sdk 초기화하기
+// 	// status가 변경될 때마다 실행되며, status가 ready일 때 초기화를 시도합니다.
+// 	useEffect(() => {
+// 		if (status === "ready" && window.Kakao) {
+// 			// 중복 initialization 방지
+// 			if (!window.Kakao.isInitialized()) {
+// 				// 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+// 				window.Kakao.init("4a4a3c7a7800e2a0af56d2d6455b429b");
+            
+// 			}
+// 		}
+// 	}, [status]);	
+//     const handleKakaoButton = () => {
+//         // window.Kakao.Link.sendScrap({
+//         //     requestUrl: currentUrl,
+//         // });
+//         console.log('hello')
+//     };
 
-    return (
-        <KakaoShareButton onClick={handleKakaoButton}>
-            <KakaoIcon src={kakaoLogo}></KakaoIcon>
-        </KakaoShareButton>
-);
+//     return (
+//         <KakaoShareButton onClick={handleKakaoButton}>
+//             <KakaoIcon src={kakaoLogo}></KakaoIcon>
+//         </KakaoShareButton>
+// );
 
 
-    // useEffect(() => {
-    //     const script = document.createElement('script')
-    //     script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
-    //     script.async = true
-    //     document.body.appendChild(script)
+    useEffect(() => {
+        const script = document.createElement('script')
+        script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
+        script.async = true
+        document.body.appendChild(script)
     
-    //     return () => {
-    //       document.body.removeChild(script)
-    //     }
-    //   }, [])
-    // return(
-    //     // <KakaoShareButton onClick={handleKakaoButton}>
-    //     //     <KakaoIcon src={kakaoLogo}></KakaoIcon>
-    //     // </KakaoShareButton>
-    //     <div>
-    //         <KakaoShareButton />
-    //   </div>
-    // );
+        return () => {
+          document.body.removeChild(script)
+        }
+      }, [])
+    return(
+        <div>
+            <KakaoShareButton />
+      </div>
+    );
 };
 
 
