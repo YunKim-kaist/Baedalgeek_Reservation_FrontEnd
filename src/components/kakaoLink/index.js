@@ -69,21 +69,53 @@ const KakaoLink = () => {
 // );
 
 
-    useEffect(() => {
-        const script = document.createElement('script')
-        script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
-        script.async = true
-        document.body.appendChild(script)
+    // useEffect(() => {
+    //     const script = document.createElement('script')
+    //     script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
+    //     script.async = true
+    //     document.body.appendChild(script)
     
-        return () => {
-          document.body.removeChild(script)
-        }
-      }, [])
-    return(
-        <div>
-            <KakaoShareButton />
-      </div>
-    );
+    //     return () => {
+    //       document.body.removeChild(script)
+    //     }
+    //   }, [])
+    // return(
+    //     <div>
+    //         <KakaoShareButton />
+    //   </div>
+    // );
+
+    useEffect(() => {
+        window.Kakao.init("4a4a3c7a7800e2a0af56d2d6455b429b");
+    }, []);
+  
+    const shareKakao = () => {
+        window.Kakao.Link.sendDefault({
+        objectType: "배달긱 서울대학교 사전예약",
+            content: {
+            title: "배달긱 서울대학교 사전예약",
+            description: "내용!",
+            link: {
+                mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
+                androidExecParams: "test",
+            },
+            },
+            buttons: [
+            {
+                title: "웹으로 이동",
+                link: {
+                mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
+                },
+            },
+            ],
+        });
+    }
+    
+    return (
+        <>
+        <button onClick={shareKakao}>카카오톡 공유하기</button>
+        </>
+    )
 };
 
 
