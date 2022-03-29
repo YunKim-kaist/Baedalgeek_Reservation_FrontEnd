@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { useScript } from "../../hooks";
 import kakaoLogo from "../../img/kakao.png";
+import baedalgeek from "../../img/baedalgeek.png"
 import KakaoShareButton from "../KakaoShareButton";
 const KakaoLink = () => {
     // const SearchBtn = styled.button`
@@ -91,10 +92,11 @@ const KakaoLink = () => {
   
     const shareKakao = () => {
         window.Kakao.Link.sendDefault({
-        objectType: "배달긱 서울대학교 사전예약",
+        objectType: 'feed',
             content: {
-            title: "배달긱 서울대학교 사전예약",
+            title: "hello",
             description: "내용!",
+            imageUrl: '{baedalgeek}',
             link: {
                 mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
                 androidExecParams: "test",
