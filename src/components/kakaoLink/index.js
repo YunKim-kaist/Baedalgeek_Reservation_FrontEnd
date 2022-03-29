@@ -95,8 +95,7 @@ const KakaoLink = () => {
         objectType: 'feed',
             content: {
             title: "사전예약하고 맥북 에어 받자!!",
-            description: "서울대학교 사전예약",
-            imageUrl: '../../gift.png',
+            imageUrl: 'https://i.ibb.co/t2MTv8H/gift.jpg',
             link: {
                 mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
                 androidExecParams: "test",
