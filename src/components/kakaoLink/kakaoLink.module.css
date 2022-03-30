@@ -39,9 +39,10 @@
 }
 .kakaobutton{
     margin-top: 2vh;
-    width: 33%;
+    width: 30%;
     border:0;
     background-color: white;
+    margin-bottom: 4vh;
 }
 .kakaobutton:hover{
     cursor: pointer;
