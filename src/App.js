@@ -51,9 +51,7 @@ const App = () => {
           <img src = {logo} className = {styles.logo}/>
         </span>
         <span className={styles.header}>
-          <span>"배달의 혁신, </span>
-          <span className = {styles.name}>배달긱</span>
-          <span>"</span>
+          "배달의 혁신, 배달긱"
         </span>
       </div>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
