@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+.main{
+    text-align: center;
+}
+.h1{
+    margin-top: 4vh;
+    font-size: 12vw;
+    font-weight: bold;
+    font-family: 'Nanum Pen Script', cursive;
+    text-shadow: 6px 2px 2px #CDD1FF;
+}
+.h2{
+    font-size: 12vw;
+    font-weight: bold;
+    font-family: 'Nanum Pen Script', cursive;
+    text-shadow: 6px 2px 2px #CDD1FF;
+}
+.description{
+    margin-top: 1vh;
+    font-size: 3.1vw;
+    font-weight: 700;
+    color: gray;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.macbookair{
+    margin-top: 5vh;
+    width: 90vw;
+    margin-bottom: 5vh;   
+}
+.line{
+    font-size: 13vw;
+    color: #f0b023;
+    text-shadow: 7px 3px 3px #fad267;
+    font-family: 'Jua', sans-serif;
+}
+.kakaobutton{
+    margin-top: 2vh;
+    width: 33%;
+    border:0;
+    background-color: white;
+}
+.kakaobutton:hover{
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 8px #fad267;
+}

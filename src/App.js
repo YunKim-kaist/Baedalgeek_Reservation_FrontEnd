@@ -6,7 +6,7 @@ import Restaurant from './components/restaurant';
 import React from 'react';
 import Map from './components/map';
 import KakaoLink from './components/kakaoLink'
-
+import logo from './img/logo.png'
 const App = () => {
   const [data, setData] = useState("giveaway");
   
@@ -46,7 +46,16 @@ const App = () => {
 
   return (
     <div>
-    <header className={styles.header}>"배달의 혁신, 배달긱"</header>
+      <div className={styles.headline}>
+        <span>
+          <img src = {logo} className = {styles.logo}/>
+        </span>
+        <span className={styles.header}>
+          <span>"배달의 혁신, </span>
+          <span className = {styles.name}>배달긱</span>
+          <span>"</span>
+        </span>
+      </div>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
       {data === "restaurant" && (<Restaurant setMap = {setMap}/>)}
       {data === "map" && (<Map setKakaoLink = {setKakaoLink}/>)}

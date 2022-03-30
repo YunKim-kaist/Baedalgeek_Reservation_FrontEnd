@@ -7,7 +7,6 @@ import airpod3 from "../../img/airpod3.jpg"
 const Giveaway = ({setRes}) => {
     return(
         <div>
-          {/* <header className={styles.header}>"배달의 혁신, 배달긱"</header> */}
           <div className= {styles.body}>
             <div className = {styles.slogan}>
               <div>배달비 0원</div>

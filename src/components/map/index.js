@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./map.module.css";
 import DaumPostcode from "react-daum-postcode";
 import { useState, useEffect } from "react";
-import PopupDom from "../popupdom";
-import PopupPostCode from "../popuppostcode";
 import map from "../../img/map.png"
 const Map = ({setKakaoLink}) => {
     const postCodeStyle = {
@@ -11,7 +9,7 @@ const Map = ({setKakaoLink}) => {
         // position: "absolute",
         // top: "50%",
         width: "90%",
-        height: "44vh"
+        height: "36vh"
       };
 
     const [isAddress, setIsAddress] = useState("");

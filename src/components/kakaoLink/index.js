@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
+import styles from "./kakaoLink.module.css";
 import styled from "styled-components";
 import { useScript } from "../../hooks";
-import kakaoLogo from "../../img/kakao.png";
-import baedalgeek from "../../img/baedalgeek.png"
+import kakaoLogo from "../../img/kakaologo.png";
+import macbookair from "../../img/macbookair2.jpg";
 import KakaoShareButton from "../KakaoShareButton";
 const KakaoLink = () => {
     // const SearchBtn = styled.button`
@@ -95,7 +96,8 @@ const KakaoLink = () => {
         objectType: 'feed',
             content: {
             title: "사전예약하고 맥북 에어 받자!!",
-            imageUrl: 'https://i.ibb.co/t2MTv8H/gift.jpg',
+            description: "서울대학교 사전예약",
+            imageUrl: 'https://i.ibb.co/3dJkZ5z/gift.jpg',
             link: {
                 mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
                 androidExecParams: "test",
@@ -113,9 +115,24 @@ const KakaoLink = () => {
     }
     
     return (
-        <>
-        <button onClick={shareKakao}>카카오톡 공유하기</button>
-        </>
+        <div className = {styles.main}>
+            <div className={styles.h1}>
+                카카오톡 공유하면
+            </div>
+            <div className = {styles.h2}>
+                맥북에어 당첨 확률이 2배!!
+            </div>
+            <div className = {styles.description}>
+                (다른 서울대 학생에게 공유해주시는 경우, 담청 확률이 2배가 됩니다.)
+            </div>
+            <img src = {macbookair} className = {styles.macbookair}/>
+            <div className = {styles.line}>공유하러 가기!</div>
+            <button onClick={shareKakao} className = {styles.kakaobutton}>
+                <img src = {kakaoLogo} className = {styles.image}/>
+            </button>
+            
+
+        </div>
     )
 };
 

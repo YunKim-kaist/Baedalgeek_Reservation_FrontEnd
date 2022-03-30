@@ -11,16 +11,54 @@ import outback from "../../img/outback.png"
 import salady from "../../img/salady.png"
 import subway from "../../img/subway.jpeg"
 
+import hongkongbanjum0410 from "../../img/restaurants/hongkongbanjum0410.png"
+import miss420 from "../../img/restaurants/miss420.png"
+import bab1ggi from "../../img/restaurants/bab1ggi.png"
+import hddonburi from "../../img/restaurants/hddonburi.png"
+import maratable from "../../img/restaurants/maratable.png"
+import redspicy from "../../img/restaurants/redspicy.png"
+import chickentheshop from "../../img/restaurants/chickentheshop.png"
+import crofflefactory from "../../img/restaurants/crofflefactory.png"
+import italypapa from "../../img/restaurants/italypapa.png"
+import diethouse from "../../img/restaurants/diethouse.png"
+
 const Restaurant = ({setMap}) => {
     const [value, setValue] = useState('');
     const handleChange = (e) => {
         setValue(e.target.value)
     }
     const handleSubmit = () => {
-        
         console.log(value);
         setMap();
     }
+    const click1 = () => {
+        setValue("홍콩반점")
+    }
+    const click2 = () => {
+        setValue("미스사이공")
+    }
+    const click3 = () => {
+        setValue("밥한끼")
+    }
+    const click4 = () => {
+        setValue("홍대돈부리")
+    }
+    const click5 = () => {
+        setValue("마라테이블")
+    }
+    const click6 = () => {
+        setValue("레드신")
+    }
+    const click7 = () => {
+        setValue("치킨더샵")
+    }
+    const click8 = () => {
+        setValue("다이어트하우스")
+    }
+    const click9 = () => {
+        setValue("이태리파파")
+    }
+
     return(
         <div className = {styles.res_body}>
             <div className = {styles.image_body}>   
@@ -30,31 +68,31 @@ const Restaurant = ({setMap}) => {
                 </div>
                 <div className = {styles.container}>
                     <div>
-                        <img src = {shakeshack} className = {styles.item}/>
+                        <img src = {hongkongbanjum0410} className = {styles.item} onClick = {click1}/>
                     </div>
                     <div>
-                        <img src = {bossam} className = {styles.item}/>
+                        <img src = {miss420} className = {styles.item} onClick = {click2}/>
                     </div>
                     <div>
-                        <img src = {dongdaemun} className = {styles.item}/>
+                        <img src = {bab1ggi} className = {styles.item} onClick = {click3}/>
                     </div>
                     <div>
-                        <img src = {bhc} className = {styles.item}/>
+                        <img src = {hddonburi} className = {styles.item} onClick = {click4}/>
                     </div>
                     <div>
-                        <img src = {outback} className = {styles.item}/>
+                        <img src = {maratable} className = {styles.item} onClick = {click5}/>
                     </div>
                     <div>
-                        <img src = {salady} className = {styles.item}/>
+                        <img src = {redspicy} className = {styles.item} onClick = {click6}/>
                     </div>
                     <div>
-                        <img src = {schoolfood} className = {styles.item}/>
+                        <img src = {chickentheshop} className = {styles.item} onClick = {click7}/>
                     </div>
                     <div>
-                        <img src = {domino} className = {styles.item}/>
+                        <img src = {diethouse} className = {styles.item} onClick = {click8}/>
                     </div>
                     <div>
-                        <img src = {subway} className = {styles.item}/>
+                        <img src = {italypapa} className = {styles.item} onClick = {click9}/>
                     </div>
                 </div>
                 <div className={styles.textline}>
