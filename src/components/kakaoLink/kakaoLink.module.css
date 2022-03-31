@@ -14,13 +14,14 @@
     text-shadow: 6px 2px 2px #CDD1FF;
 }
 .h2{
+    margin-top: 0.3vh;
     font-size: 12vw;
     font-weight: bold;
     font-family: 'Nanum Pen Script', cursive;
     text-shadow: 6px 2px 2px #CDD1FF;
 }
 .description{
-    margin-top: 1vh;
+    margin-top: 1.5vh;
     font-size: 3.1vw;
     font-weight: 700;
     color: gray;

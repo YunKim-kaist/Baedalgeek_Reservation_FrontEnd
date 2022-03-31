@@ -95,7 +95,7 @@ const KakaoLink = () => {
         window.Kakao.Link.sendDefault({
         objectType: 'feed',
             content: {
-            title: "배달긱사 전예약하고 맥북에어 받자!!",
+            title: "배달긱 사전예약하고 맥북에어 받자!!",
             description: "서울대학교 배달긱 사전예약",
             imageUrl: 'https://i.ibb.co/3dJkZ5z/gift.jpg',
             link: {
@@ -117,13 +117,13 @@ const KakaoLink = () => {
     return (
         <div className = {styles.main}>
             <div className={styles.h1}>
-                카카오톡 공유하면
+                카카오톡 공유해서 맥북에어
             </div>
             <div className = {styles.h2}>
-                맥북에어 당첨 확률이 2배!!
+                당첨 확률 배로 만들자!!
             </div>
             <div className = {styles.description}>
-                (다른 서울대 학생에게 공유해주시는 경우, 담청 확률이 2배가 됩니다.)
+                (공유를 통해 참여하는 친구가 N명이라면, 당첨 확률이 N+1배가 됩니다.)
             </div>
             <img src = {macbookair} className = {styles.macbookair}/>
             <div className = {styles.line}>공유하러 가기!</div>
