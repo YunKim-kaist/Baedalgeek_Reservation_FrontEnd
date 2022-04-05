@@ -127,7 +127,7 @@ const KakaoLink = () => {
             </div>
             <img src = {macbookair} className = {styles.macbookair}/>
             <div className = {styles.line}>공유하러 가기!</div>
-            <div className = {styles.line0}>(서울대 학생 혹은 관련된 분들에게만 공유 부탁드립니다!)</div>
+            <div className = {styles.line0}>(서울대 학생 혹은 관련된 분들에게만 공유 부탁드립니다!!)</div>
             <button onClick={shareKakao} className = {styles.kakaobutton}>
                 <img src = {kakaoLogo} className = {styles.image}/>
             </button>
