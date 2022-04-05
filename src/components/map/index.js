@@ -110,7 +110,7 @@ const Map = ({setKakaoLink, value}) => {
             alert('개인정보 제공에 동의해주시기 바랍니다.');
         }
         else{
-            axios.post("https://52.79.133.191:8080/map",{
+            axios.post("https://52.79.133.191:443/map",{
                 restaurant: value,
                 livingAlone: currentClick,
                 address: isAddress,
