@@ -9,12 +9,14 @@ import KakaoLink from './components/kakaoLink'
 import logo from './img/logo.png'
 const App = () => {
   const [data, setData] = useState("giveaway");
-  
+  const [value, setValue] = useState("");
+
   const setRes = () => {
     setData("restaurant")
   }
-  const setMap = () => {
+  const setMap = (restaurant) => {
     setData("map")
+    setValue(restaurant)
   }
   const setKakaoLink = () =>{
     setData("kakaoLink")
@@ -56,7 +58,7 @@ const App = () => {
       </div>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
       {data === "restaurant" && (<Restaurant setMap = {setMap}/>)}
-      {data === "map" && (<Map setKakaoLink = {setKakaoLink}/>)}
+      {data === "map" && (<Map setKakaoLink = {setKakaoLink} value = {value}/>)}
       {data === "kakaoLink" && (<KakaoLink/>)}
     </div>
   );

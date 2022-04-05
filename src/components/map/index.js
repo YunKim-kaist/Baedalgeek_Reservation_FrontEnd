@@ -1,9 +1,10 @@
 import React from "react";
+import axios from "axios";
 import styles from "./map.module.css";
 import DaumPostcode from "react-daum-postcode";
 import { useState, useEffect } from "react";
 import map from "../../img/map.png"
-const Map = ({setKakaoLink}) => {
+const Map = ({setKakaoLink, value}) => {
     const postCodeStyle = {
         // display: "block",
         // position: "absolute",
@@ -71,11 +72,16 @@ const Map = ({setKakaoLink}) => {
 
     const [isName, setIsName] = useState('');
     const [isNumber, setIsNumber] = useState('');
+    const [isRecommend, setIsRecommend] = useState('');
+
     const handleName = (e) => {
         setIsName(e.target.value)
     }
     const handleNumber = (e) => {
         setIsNumber(e.target.value);
+    }
+    const handleRecommend = (e) => {
+        setIsRecommend(e.target.value);
     }
 
     const [isChecked, setIsChecked] = useState(false);
@@ -93,15 +99,27 @@ const Map = ({setKakaoLink}) => {
     }
 
     const handleSubmit = () => {
+        console.log(value);
         console.log(currentClick)
         console.log(isAddress);
         console.log(isName);
         console.log(isNumber);
+        console.log(isRecommend);
         console.log(isChecked);
         if(isChecked === false){
             alert('개인정보 제공에 동의해주시기 바랍니다.');
         }
-        setKakaoLink();
+        else{
+            axios.post("/map",{
+                restaurant: value,
+                livingAlone: currentClick,
+                address: isAddress,
+                name: isName,
+                number: isNumber,
+                recommend: isRecommend,
+            })
+            setKakaoLink();
+        }   
     }
 
     // const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -115,8 +133,8 @@ const Map = ({setKakaoLink}) => {
         <div className = {styles.map_body}>
             <div className = {styles.header1}>현재 자취를 하고 계신가요?</div>
             <div>
-                <button id = "liveAlone" className={styles.b1} onClick = {GetClick}>예</button>
-                <button id = "notLiveAlone" className={styles.b2} onClick = {GetClick}>아니요</button>
+                <button id = "예" className={styles.b1} onClick = {GetClick}>예</button>
+                <button id = "아니요" className={styles.b2} onClick = {GetClick}>아니요</button>
             </div>
             <div className = {styles.header2_1}>배달음식을 주문한다면 수령하실 주소를</div>
             <div className = {styles.header2_2}>입력해주세요!</div>
@@ -137,12 +155,16 @@ const Map = ({setKakaoLink}) => {
             <div>
                 <label>
                     <div className={styles.line}>
-                    <span className={styles.name}>이름:</span>
+                    <div className={styles.name}>이름:</div>
                     <textarea type = "text" className={styles.input} onChange = {(e) => handleName(e)}/>
                     </div>
                     <div>
-                    <span className={styles.number}>전화번호:</span>
+                    <div className={styles.number}>전화번호:</div>
                     <textarea type = "text" className={styles.input} onChange = {(e) => handleNumber(e)}/>
+                    </div>
+                    <div>
+                    <div className={styles.recommend}>추천인 이름:</div>
+                    <textarea placeholder="없으면 비워주세요." type = "text" className={styles.input} onChange = {(e) => handleRecommend(e)}/>
                     </div>
                     <div>
                     <span className={styles.m2}>개인정보 제공에 동의합니다.</span>

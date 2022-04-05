@@ -91,19 +91,10 @@
     height: 40vw;
 }
 .line{
-    margin-top: 3.5vh;
-    margin-bottom: 1.2vh;
-}
-.input{
-    width: 20vh;
-    height: 2vh;
-    font-size: 4vw;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 500;
-    border: 5px solid black;
+    margin-top: 1.5vh;
 }
 .submit{
-    margin-top: 3vh;
+    margin-top: 2vh;
     width: 40%;
     height: 5vh;
     font-size: 5vw;
@@ -116,19 +107,48 @@
     font-weight: 600;
 }
 .name{
-    font-size: 5.5vw;
-    margin-right: 3vw;
+    margin-top: 1.2vh;
+    position: absolute;
+    margin-left: 27%;
+    font-size: 5vw;
     font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 600;
-    padding-bottom: 2px;
+    font-weight: 700;
 
 }
 .number{
-    font-size: 5.5vw;
-    margin-right: 3vw;
+    margin-top: 1.2vh;
+    position: absolute;
+    margin-left: 18%;
+    font-size: 5vw;
     font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     
+}
+.recommend{
+    margin-top: 1.2vh;
+    position: absolute;
+    margin-left: 12%;
+    font-size: 5vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+}
+.input{
+    margin-top: 1.2vh;
+    margin-left: 33%;
+    width: 20vh;
+    height: 2vh;
+    font-size: 3.7vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    border: 5px solid black;
+}
+.input0{
+    width: 20vh;
+    height: 2vh;
+    font-size: 4vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    border: 5px solid black;
 }
 .m1{
     font-size: 3vw;
@@ -140,10 +160,9 @@
     font-size: 5vw;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    margin-top: 1vh;
 }
 .checkbox{
-    margin-top: 2vh;
+    margin-top: 2.5vh;
     margin-left: 2vw;
     width: 3vw;
     height: 3vw;

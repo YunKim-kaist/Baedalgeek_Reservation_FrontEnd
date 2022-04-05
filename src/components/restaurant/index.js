@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./restaurant.module.css";
 import { useState } from "react";
+import axios from "axios";
 import shakeshack from "../../img/shakeshack.png"
 import bhc from "../../img/bhc.jpg"
 import schoolfood from "../../img/schoolfood.png"
@@ -29,7 +30,10 @@ const Restaurant = ({setMap}) => {
     }
     const handleSubmit = () => {
         console.log(value);
-        setMap();
+        // axios.post("/restaurant",{
+        //     restaurant: value,
+        // })
+        setMap(value);
     }
     const click1 = () => {
         setValue("홍콩반점")
@@ -58,6 +62,34 @@ const Restaurant = ({setMap}) => {
     const click9 = () => {
         setValue("이태리파파")
     }
+
+
+    // const fetchUsers = async () => {
+    //     try{
+    //     const response = await axios.get(
+    //         'http://52.78.178.207/restaurant'
+    //     )
+    //     setData(response.data);
+    //     console.log(response)
+    //     }
+    //     catch(e){
+    //     console.log(e);
+    //     }
+    // }
+    // useEffect(() => {
+    //     fetchUsers();
+    // }, []);
+
+    // axios({
+    //     method : 'get',
+    //     url : 'http://52.78.178.207/restaurant',
+    //     data:{
+    //         restaurant: value
+    //     }
+    // }).then(function(response){
+    //     console.log(response);
+    // });
+
 
     return(
         <div className = {styles.res_body}>

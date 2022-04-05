@@ -38,9 +38,15 @@
     text-shadow: 7px 3px 3px #fad267;
     font-family: 'Jua', sans-serif;
 }
+.line0{
+    font-size: 3.5vw;
+    color: #f0b023;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+}
 .kakaobutton{
-    margin-top: 2vh;
-    width: 30%;
+    margin-top: 3vh;
+    width: 33%;
     border:0;
     background-color: white;
     margin-bottom: 4vh;
