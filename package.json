@@ -56,5 +56,5 @@
     "nodemon": "^2.0.15"
   },
   "homepage": "https://YunKim-kaist.github.io/Reservation/",
-  "proxy": "https://52.79.133.191:443"
+  "proxy": "https://52.79.133.191:8080"
 }
