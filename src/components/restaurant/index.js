@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./restaurant.module.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import shakeshack from "../../img/shakeshack.png"
 import bhc from "../../img/bhc.jpg"
@@ -25,6 +25,9 @@ import diethouse from "../../img/restaurants/diethouse.png"
 
 const Restaurant = ({setMap}) => {
     const [value, setValue] = useState('');
+    const [currentClick, setCurrentClick] = useState(null);
+    const [prevClick, setPrevClick] = useState(null);
+
     const handleChange = (e) => {
         setValue(e.target.value)
     }
@@ -35,34 +38,67 @@ const Restaurant = ({setMap}) => {
         // })
         setMap(value);
     }
-    const click1 = () => {
-        setValue("홍콩반점")
+    const click1 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click2 = () => {
-        setValue("미스사이공")
+    const click2 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click3 = () => {
-        setValue("밥한끼")
+    const click3 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click4 = () => {
-        setValue("홍대돈부리")
+    const click4 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click5 = () => {
-        setValue("마라테이블")
+    const click5 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click6 = () => {
-        setValue("레드신")
+    const click6 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click7 = () => {
-        setValue("치킨더샵")
+    const click7 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click8 = () => {
-        setValue("다이어트하우스")
+    const click8 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
-    const click9 = () => {
-        setValue("이태리파파")
+    const click9 = (e) => {
+        setValue(e.target.id)
+        setCurrentClick(e.target.id);
     }
 
+    useEffect(
+        (e) => {
+            if (currentClick !== null) {
+                let current = document.getElementById(currentClick);
+                current.style.border = "12px solid gray"
+                current.style.boxShadow = "0px 0px 24px 12px gray";
+              }
+        
+              if (prevClick !== null) {
+                let prev = document.getElementById(prevClick);
+                prev.style.border = "3px solid gray"
+                prev.style.boxShadow = "0px 0px 6px 3px gray";
+              }
+              setPrevClick(currentClick);
+            },
+            [currentClick]
+    );
+
+    var inputRef = useRef();
+    const onPress = (e) => {
+        if(e.key === 'Enter'){
+            inputRef.focus();
+        }
+    }
 
     // const fetchUsers = async () => {
     //     try{
@@ -100,31 +136,31 @@ const Restaurant = ({setMap}) => {
                 </div>
                 <div className = {styles.container}>
                     <div>
-                        <img src = {hongkongbanjum0410} className = {styles.item} onClick = {click1}/>
+                        <img id = "홍콩반점" src = {hongkongbanjum0410} className = {styles.item} onClick = {(e) => click1(e)}/>
                     </div>
                     <div>
-                        <img src = {miss420} className = {styles.item} onClick = {click2}/>
+                        <img id = "미스사이공" src = {miss420} className = {styles.item} onClick = {(e) => click2(e)}/>
                     </div>
                     <div>
-                        <img src = {bab1ggi} className = {styles.item} onClick = {click3}/>
+                        <img id = "밥한끼" src = {bab1ggi} className = {styles.item} onClick = {(e) => click3(e)}/>
                     </div>
                     <div>
-                        <img src = {hddonburi} className = {styles.item} onClick = {click4}/>
+                        <img id = "홍대돈부리" src = {hddonburi} className = {styles.item} onClick = {(e) => click4(e)}/>
                     </div>
                     <div>
-                        <img src = {maratable} className = {styles.item} onClick = {click5}/>
+                        <img id = "마라테이블" src = {maratable} className = {styles.item} onClick = {(e) => click5(e)}/>
                     </div>
                     <div>
-                        <img src = {redspicy} className = {styles.item} onClick = {click6}/>
+                        <img id = "레드선" src = {redspicy} className = {styles.item} onClick = {(e) => click6(e)}/>
                     </div>
                     <div>
-                        <img src = {chickentheshop} className = {styles.item} onClick = {click7}/>
+                        <img id = "치킨더샵" src = {chickentheshop} className = {styles.item} onClick = {(e) => click7(e)}/>
                     </div>
                     <div>
-                        <img src = {diethouse} className = {styles.item} onClick = {click8}/>
+                        <img id = "다이어트하우스" src = {diethouse} className = {styles.item} onClick = {(e) => click8(e)}/>
                     </div>
                     <div>
-                        <img src = {italypapa} className = {styles.item} onClick = {click9}/>
+                        <img  id = "이태리파파" src = {italypapa} className = {styles.item} onClick = {(e) => click9(e)}/>
                     </div>
                 </div>
                 <div className={styles.textline}>
@@ -139,11 +175,11 @@ const Restaurant = ({setMap}) => {
                 </form> */}
                 <div>
                     <label>
-                        <textarea type = "text" className={styles.input} onChange = {(e) => handleChange(e)}/>
+                        <textarea type = "text" className={styles.input} onChange = {(e) => handleChange(e)} onKeyPress = {(e) => onPress(e)}/>
                     </label>
                 </div>
             </div>
-            <button className = {styles.button} onClick = {() => handleSubmit()}>다음</button>
+            <button className = {styles.button} onClick = {() => handleSubmit()} ref = {(ref) => {inputRef = ref;}}>다음</button>
         </div>
     );
 };

@@ -45,8 +45,10 @@
     padding-bottom: 0.5vh;
 }
 .item{
-    border: 5px solid gray;
-    box-shadow: 0px 0px 10px 3px gray;
+    /* border: 5px solid gray;
+    box-shadow: 0px 0px 10px 3px gray; */
+    border: 3px solid gray;
+    box-shadow: 0px 0px 6px 3px gray;
     border-radius: 17%;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -60,16 +62,16 @@
     width: 85%;
     margin-right: 5%;
     margin-left: 5%;
-    margin-top: 1.5vh;
-    height: 6vh;
+    margin-top: 4vw;
+    height: 14vw;
     font-size: 5vw;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 500;
     border: 1px solid black;
-    margin-bottom: 3vh;
+    margin-bottom: 6.5vw;
 }
 .submit{
-    margin-top: 2vh;
+    margin-top: 4vw;
     width: 15%;
     height: 4vh;
     font-size: 5vw;
@@ -83,16 +85,16 @@
 }
 .button{
     width: 30%;
-    height: 6vh;
+    height: 12vw;
     font-size: 6vw;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 5.3vh;
+    margin-top: 10vw;
     background-color: #CDD1FF;
     border: 2px solid #96A0FF;
     border-radius: 6%;
     box-shadow: 0px 0px 5px 2px gray;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    margin-bottom: 4vh;
+    color: black;
 }

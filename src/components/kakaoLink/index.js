@@ -92,26 +92,35 @@ const KakaoLink = () => {
     }, []);
   
     const shareKakao = () => {
-        window.Kakao.Link.sendDefault({
-        objectType: 'feed',
-            content: {
-            title: "배달긱 사전예약하고 맥북에어 받자!!",
-            description: "서울대학교 배달긱 사전예약",
-            imageUrl: 'https://i.ibb.co/3dJkZ5z/gift.jpg',
-            link: {
-                mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
-                androidExecParams: "test",
-            },
-            },
-            buttons: [
-            {
-                title: "웹으로 이동",
-                link: {
-                mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
-                },
-            },
-            ],
-        });
+        if (navigator.share) {
+            navigator.share({
+                title: '배달긱 사전예약하고 맥북에어 받자!!',
+                text: '서울대학교 배달긱 사전예약',
+                url: 'http://snubaedalgeek.com:3000',
+            });
+        }
+        else{
+            window.Kakao.Link.sendDefault({
+                objectType: 'feed',
+                    content: {
+                    title: "배달긱 사전예약하고 맥북에어 받자!!",
+                    description: "서울대학교 배달긱 사전예약",
+                    imageUrl: 'https://i.ibb.co/3dJkZ5z/gift.jpg',
+                    link: {
+                        mobileWebUrl: "http://snubaedalgeek.com:3000",
+                        androidExecParams: "test",
+                    },
+                    },
+                    buttons: [
+                    {
+                        title: "웹으로 이동",
+                        link: {
+                        mobileWebUrl: "https://yunkim-kaist.github.io/Reservation/",
+                        },
+                    },
+                    ],
+                });
+        }
     }
     
     return (

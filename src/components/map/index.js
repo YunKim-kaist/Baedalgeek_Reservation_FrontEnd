@@ -2,20 +2,22 @@ import React from "react";
 import axios from "axios";
 import styles from "./map.module.css";
 import DaumPostcode from "react-daum-postcode";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import map from "../../img/map.png"
 const Map = ({setKakaoLink, value}) => {
+
     const postCodeStyle = {
         // display: "block",
         // position: "absolute",
         // top: "50%",
         width: "90%",
-        height: "36vh"
+        height: "75vw"
       };
 
     const [isAddress, setIsAddress] = useState("");
     const [isZoneCode, setIsZoneCode] = useState();
     const [isPostOPen, setIsPostOpen] = useState(false);
+    
     
     const handleComplete = (data) => {
         let fullAddress = data.address;
@@ -110,7 +112,7 @@ const Map = ({setKakaoLink, value}) => {
             alert('개인정보 제공에 동의해주시기 바랍니다.');
         }
         else{
-            axios.post("snubaedalgeek.com:8080/map",{
+            axios.post("http://52.79.133.191:8080/map",{
                 restaurant: value,
                 livingAlone: currentClick,
                 address: isAddress,
@@ -122,6 +124,22 @@ const Map = ({setKakaoLink, value}) => {
         }   
     }
 
+    var inputRef = useRef([3]);
+    const pressEnter0 = (e) => {
+        if(e.key === 'Enter'){
+            inputRef.current[0].focus();
+        }
+    }
+    const pressEnter1 = (e) => {
+        if(e.key === 'Enter'){
+            inputRef.current[1].focus();
+        }
+    }
+    const pressEnter2 = (e) => {
+        if(e.key === 'Enter'){
+            inputRef.current[2].focus();
+        }
+    }
     // const [isPopupOpen, setIsPopupOpen] = useState(false);
     // const openPostCode = () => {
     //     setIsPopupOpen(true);
@@ -156,19 +174,23 @@ const Map = ({setKakaoLink, value}) => {
                 <label>
                     <div className={styles.line}>
                     <div className={styles.name}>이름:</div>
-                    <textarea type = "text" className={styles.input} onChange = {(e) => handleName(e)}/>
+                    <textarea type = "text" onKeyPress={(e) => pressEnter0(e)} className={styles.input} onChange = {(e) => handleName(e)} style={{ resize: 'none' }}/>
                     </div>
                     <div>
                     <div className={styles.number}>전화번호:</div>
-                    <textarea type = "text" className={styles.input} onChange = {(e) => handleNumber(e)}/>
+                    <textarea type = "text" 
+                    ref={(ref) => {inputRef.current[0] = ref;}}
+                    onKeyPress={(e) => pressEnter1(e)}
+                     className={styles.input} onChange = {(e) => handleNumber(e)}/>
                     </div>
                     <div>
                     <div className={styles.recommend}>추천인 이름:</div>
-                    <textarea placeholder="없으면 비워주세요." type = "text" className={styles.input} onChange = {(e) => handleRecommend(e)}/>
+                    <textarea placeholder="없으면 비워주세요." type = "text" ref={(ref) => {inputRef.current[1] = ref;}}
+                    onKeyPress={(e) => pressEnter2(e)} className={styles.input} onChange = {(e) => handleRecommend(e)}/>
                     </div>
                     <div>
                     <span className={styles.m2}>개인정보 제공에 동의합니다.</span>
-                    <input type="checkbox" className={styles.checkbox} onChange={handleCheckbox}/>
+                    <input type="checkbox" className={styles.checkbox} onChange={handleCheckbox} ref = {(ref) => {inputRef.current[2] = ref;}}/>
                     </div>
                     <div className={styles.m1}>(당첨시, 알림 메세지가 갈 예정입니다.)</div>
                 </label>

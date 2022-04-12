@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap");
 
+.head{
+    height: auto;
+}
 .header{
     font-size: 9vw;
     color:black;
@@ -88,5 +91,5 @@
     font-weight: 600;
     box-shadow: 0px 0px 5px 2px gray;
     font-family: 'Nanum Gothic', sans-serif;
-    margin-bottom: 4vh;
+    color: black;
 }

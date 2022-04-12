@@ -45,11 +45,10 @@
     font-weight: 700;
 }
 .kakaobutton{
-    margin-top: 3vh;
-    width: 33%;
+    margin-top: 4vh;
+    width: 30%;
     border:0;
     background-color: white;
-    margin-bottom: 4vh;
 }
 .kakaobutton:hover{
     cursor: pointer;
