@@ -53,7 +53,8 @@ const App = () => {
           <img src = {logo} className = {styles.logo}/>
         </span>
         <span className={styles.header}>
-          "배달의 혁신, 배달긱"
+          <div>서울대 자취생을 위한</div> 
+          <div>배달긱 서비스 사전예약</div>
         </span>
       </div>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
