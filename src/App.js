@@ -6,19 +6,25 @@ import Restaurant from './components/restaurant';
 import React from 'react';
 import Map from './components/map';
 import KakaoLink from './components/kakaoLink'
-import logo from './img/logo.png'
+import logo from './img/baedalgeek.png'
 const App = () => {
   const [data, setData] = useState("giveaway");
   const [value, setValue] = useState("");
+  const [num, setNum] = useState('');
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
 
   const setRes = () => {
     setData("restaurant")
   }
   const setMap = (restaurant) => {
-    setData("map")
     setValue(restaurant)
+    setData("map")
   }
-  const setKakaoLink = () =>{
+  const setKakaoLink = (num, name, number) =>{
+    setNum(num)
+    setName(name);
+    setNumber(number);
     setData("kakaoLink")
   }
   
@@ -52,15 +58,17 @@ const App = () => {
         <span>
           <img src = {logo} className = {styles.logo}/>
         </span>
-        <span className={styles.header}>
-          <div>서울대 자취생을 위한</div> 
-          <div>배달긱 서비스 사전예약</div>
+        <span className={styles.headerup}>
+          <span className={styles.header}>
+            <div>서울대 자취생을 위한</div> 
+            <div>배달긱 서비스 사전예약</div>
+          </span>
         </span>
       </div>
       {data === "giveaway" && (<Giveaway setRes = {setRes}/>)}
       {data === "restaurant" && (<Restaurant setMap = {setMap}/>)}
       {data === "map" && (<Map setKakaoLink = {setKakaoLink} value = {value}/>)}
-      {data === "kakaoLink" && (<KakaoLink/>)}
+      {data === "kakaoLink" && (<KakaoLink num = {num} name = {name} number = {number} setNum = {setNum}/>)}
     </div>
   );
 

@@ -7,20 +7,19 @@
     text-align: center;
 }
 .image_body{
-    margin-top: 3vh;
-    margin-left: 4%;
-    margin-right: 5%;
+    margin-top: 3.5vh;
     text-align: center;
-    border: 10px solid #96A0FF;
+    border: 1vw solid #96A0FF;
     align-items: center;
-    box-shadow: 0px 0px 20px 7px gray;
+    box-shadow: 0px 0px 1.6vw 0.8vw gray;
     border-radius: 4%;
-    width: 90%;
+    margin-left: 3%;
+    width: 92%;
     background-color: #FBFBFF;
 }
 .header{
     margin-top: 2vh;
-    font-size: 6.2vw;
+    font-size: 6vw;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
 }
@@ -28,11 +27,10 @@
     padding-bottom: 0.8vh;
 }
 .container{
-    margin-top: 3vh;
+    margin-top: 3.5vh;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    font-size: 8vw;
+    grid-gap: 0vw;
     margin-bottom: 3vh;
 }
 .textline{
@@ -45,15 +43,12 @@
     padding-bottom: 0.5vh;
 }
 .item{
-    /* border: 5px solid gray;
-    box-shadow: 0px 0px 10px 3px gray; */
-    border: 3px solid gray;
-    box-shadow: 0px 0px 6px 3px gray;
+    border: 0.6vw solid gray;
+    box-shadow: 0px 0px 1vw 0.5vw gray;
     border-radius: 17%;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    width: 24vw;
-    height: 24vw;
+    width: 21vw;
+    height: 21vw;
+    margin-bottom: 5vw;
 }
 .item:hover{
     cursor: pointer;
@@ -62,40 +57,27 @@
     width: 85%;
     margin-right: 5%;
     margin-left: 5%;
-    margin-top: 4vw;
-    height: 14vw;
-    font-size: 5vw;
+    margin-top: 2vw;
+    height: 8vw;
+    font-size: 4.5vw;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 500;
     border: 1px solid black;
-    margin-bottom: 6.5vw;
-}
-.submit{
-    margin-top: 4vw;
-    width: 15%;
-    height: 4vh;
-    font-size: 5vw;
-    margin-bottom: 2vh;
-    background-color: #CDD1FF;
-    border: 2px solid #96A0FF;
-    border-radius: 6%;
-    box-shadow: 0px 0px 5px 2px gray;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 600;
+    margin-bottom: 5.5vw;
 }
 .button{
-    width: 30%;
+    width: 28%;
     height: 12vw;
-    font-size: 6vw;
+    font-size: 5.5vw;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 10vw;
-    margin-bottom: 8vw;
+    margin-top: 7vw;
+    margin-bottom: 5vw;
     background-color: #CDD1FF;
     border: 2px solid #96A0FF;
     border-radius: 6%;
-    box-shadow: 0px 0px 5px 2px gray;
+    box-shadow: 0px 0px 1vw 0.5vw gray;
     font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: black;
 }

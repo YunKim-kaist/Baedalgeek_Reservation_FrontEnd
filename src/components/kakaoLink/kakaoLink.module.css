@@ -7,46 +7,89 @@
     text-align: center;
 }
 .h1{
-    margin-top: 4vh;
-    font-size: 12vw;
+    margin-top: 3vh;
+    font-size: 12.5vw;
     font-weight: bold;
     font-family: 'Nanum Pen Script', cursive;
-    text-shadow: 6px 2px 2px #CDD1FF;
+    text-shadow: 0.5vw 0.2vw 0.2vw #CDD1FF;
 }
 .h2{
     margin-top: 0.3vh;
-    font-size: 12vw;
+    font-size: 12.5vw;
     font-weight: bold;
     font-family: 'Nanum Pen Script', cursive;
-    text-shadow: 6px 2px 2px #CDD1FF;
+    text-shadow: 0.5vw 0.2vw 0.2vw #CDD1FF;
 }
 .description{
-    margin-top: 1.5vh;
-    font-size: 3.1vw;
+    float: left;
+    width: 100%;    
+    margin-top: 2vh;
+    font-size: 3.2vw;
     font-weight: 700;
     color: gray;
     font-family: 'Nanum Gothic', sans-serif;
 }
+.important{
+    text-underline-position: under;
+    text-decoration: underline;
+}
 .macbookair{
-    margin-top: 5vh;
-    width: 90vw;
-    margin-bottom: 5vh;   
+    margin-top: 3vh;
+    width: 75vw;
+    margin-bottom: 2vh;   
+}
+.curr{
+    float: left;
+    margin-left: 2%;
+    width: 96%;
+    font-size: 7vw;
+    color: #0d4571;
+    text-shadow: 1px 1px 1px #1976d2;
+    font-family: 'Jua', sans-serif;
+}
+.curr_num{
+    text-decoration: underline;
+    font-size: 8vw;
+    text-shadow: 3px 2px 2px #1976d2;
+}
+.event{
+    margin-top: 0.4vh;
+    float: left;
+    width: 100%;
+    font-size: 4.5vw;
+    color: #0d4571;
+    text-shadow: 1px 1px 1px #1976d2;
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 2.3vh;
+}
+.event_end{
+    float: left;
+    margin-left: 1%;
+    width: 98%;
+    font-size: 5.7vw;
+    margin-bottom: 3.3vw;
+    color: #0d4571;
+    text-shadow: 1px 1px 1px #1976d2;
+    font-family: 'Jua', sans-serif;
 }
 .line{
     font-size: 13vw;
     color: #f0b023;
-    text-shadow: 7px 3px 3px #fad267;
+    text-shadow: 0.6vw 0.3vw 0.3vw #fad267;
     font-family: 'Jua', sans-serif;
 }
 .line0{
-    font-size: 3.5vw;
+    float:left;
+    width: 100%;
+    font-size: 4vw;
     color: #f0b023;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
 }
 .kakaobutton{
     margin-top: 4vh;
-    width: 30%;
+    margin-bottom: 3vh;
+    width: 33%;
     border:0;
     background-color: white;
 }
@@ -56,5 +99,23 @@
 .image{
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 0px 25px 8px #fad267;
+    box-shadow: 0px 0px 4vw 2vw #fad267;
+}
+.final_announcement{
+    float: left;
+    width: 94%;
+    margin-left: 3%;
+    font-size: 2.8vw;
+    
+    font-weight: 300;
+    font-family: 'Jua', sans-serif;
+}
+.tel{
+    float:left;
+    width: 100%;
+    font-size: 2.2vw;
+    font-weight: 300;
+    font-family: 'Jua', sans-serif;   
+    margin-top: 0.7vw;
+    margin-bottom: 4.5vw;
 }

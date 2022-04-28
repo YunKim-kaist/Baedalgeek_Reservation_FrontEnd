@@ -1,89 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
 .head{
     height: auto;
 }
 
 .body{
-    margin-top: 1.5vh;
+    margin-top: 3vw;
     text-align: center;
 }
 
 .slogan{
-    margin-top: 1.5vh;
-    font-size: 14vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    font-size: 13vw;
     font-weight: bold;
     font-family: 'Nanum Pen Script', 'cursive';
-
 }
 .announcement{
-    margin-top: 1.5vh;
-    margin-left: 3%;
-    margin-right: 3%;
-    font-size: 4vw;
-    font-family: 'jua', sans-serif;  
+    width: 100%;
+    float:left;
+    font-size: 4.3vw;
+    font-weight: 500;
+    font-family: 'Jua', sans-serif;
     color: #585858;
+
+}
+.announcement_line{
+    margin-top: 0.7vw;
 }
 .giveaway{
-    margin-top: 2.5vh;
-    font-size: 4.5vw;
+    margin-top: 26vw;
+    font-size: 4vw;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
     border-radius: 10%;
     margin-left: 4%;
     margin-right: 5%;
     width: 90%;
-    border: 5px solid #96A0FF;
-    box-shadow: 0px 0px 20px 7px gray;
-    padding-bottom: 3vh;
+    border: 1vw solid #96A0FF;
+    box-shadow: 0px 0px 1.6vw 0.8vw gray;
+    padding-bottom: 11vw;
     
 }
 .giveaway_headline{
-    padding-top: 2vh;
-    padding-bottom: 1.3vh;
+    padding-top: 4vw;
+    padding-bottom: 2.6vw;
     font-size: 5.5vw;
 }
 .giveaway_headline0{
-    padding-bottom: 0.5vh;
+    padding-bottom: 1vw;
 }
 .giveaway_mac{
-    padding-bottom: 3vh;
+    float:left;
+    margin-left: 33%;
+    padding-bottom: 6vw;
 }
 .giveaway_ipad{
-    width: 35%;
-    padding-right: 4vw;
-    padding-bottom: 10vh;
+    float:left;
+    padding-left: 8%;
 }
-.giveaway_airpod{
-    width: 35%;
-    padding-left: 4vw;
-    padding-bottom: 10vh;
+.giveaway_baskinrobbins{
+    float:left;
+    padding-left: 12%;
 }
 .ipadimage{
     padding-left: 1vw;
-    padding-right: 6vw;
+    padding-right: 8vw;
 }
-.airpodimage{
+.baskinrobbins{
     padding-left: 6vw;
     padding-bottom: 3vw;
 }
 
+.announcement_gift{
+    margin-top: 1vw;
+    padding-left: 5%;
+    float: left;
+    width: 90%;
+    padding-top: 3vw;
+    font-size: 3vw;
+    font-weight: 700;
+    font-family: 'NanumGothic', sans-serif;
+    color: #585858;
+}
+
 .button{
     width: 60%;
-    height: 6vh;
+    height: 12vw;
     font-size: 5vw;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 3.5vh;
+    margin-top: 6vw;
     margin-bottom: 6vw;
     background-color: #CDD1FF;
     border: 2px solid #96A0FF;
     border-radius: 3%;
     font-weight: 600;
-    box-shadow: 0px 0px 5px 2px gray;
+    box-shadow: 0px 0px 1vw 0.4vw gray;
     font-family: 'Nanum Gothic', sans-serif;
     color: black;
 }

@@ -19,9 +19,10 @@ import hddonburi from "../../img/restaurants/hddonburi.png"
 import maratable from "../../img/restaurants/maratable.png"
 import redspicy from "../../img/restaurants/redspicy.png"
 import chickentheshop from "../../img/restaurants/chickentheshop.png"
-import crofflefactory from "../../img/restaurants/crofflefactory.png"
+import crofflefactory from "../../img/restaurants/crofflefactory.jpg"
 import italypapa from "../../img/restaurants/italypapa.png"
 import diethouse from "../../img/restaurants/diethouse.png"
+import casafiesta from "../../img/restaurants/casafiesta.png"
 
 const Restaurant = ({setMap}) => {
     const [value, setValue] = useState('');
@@ -36,7 +37,12 @@ const Restaurant = ({setMap}) => {
         // axios.post("/restaurant",{
         //     restaurant: value,
         // })
-        setMap(value);
+        if(value === ''){
+            alert("음식점을 선택 혹은 입력해주세요")
+        }
+        else{
+            setMap(value);
+        }
     }
     const click1 = (e) => {
         setValue(e.target.id)
@@ -79,14 +85,14 @@ const Restaurant = ({setMap}) => {
         (e) => {
             if (currentClick !== null) {
                 let current = document.getElementById(currentClick);
-                current.style.border = "12px solid gray"
-                current.style.boxShadow = "0px 0px 24px 12px gray";
+                current.style.border = "1.5vw solid gray"
+                current.style.boxShadow = "0px 0px 3vw 2vw gray";
               }
         
               if (prevClick !== null) {
                 let prev = document.getElementById(prevClick);
-                prev.style.border = "3px solid gray"
-                prev.style.boxShadow = "0px 0px 6px 3px gray";
+                prev.style.border = "0.6vw solid gray"
+                prev.style.boxShadow = "0px 0px 1vw 0.5vw gray";
               }
               setPrevClick(currentClick);
             },
@@ -157,22 +163,16 @@ const Restaurant = ({setMap}) => {
                         <img id = "치킨더샵" src = {chickentheshop} className = {styles.item} onClick = {(e) => click7(e)}/>
                     </div>
                     <div>
-                        <img id = "다이어트하우스" src = {diethouse} className = {styles.item} onClick = {(e) => click8(e)}/>
+                        <img id = "크로플팩토리" src = {crofflefactory} className = {styles.item} onClick = {(e) => click8(e)}/>
                     </div>
                     <div>
-                        <img  id = "이태리파파" src = {italypapa} className = {styles.item} onClick = {(e) => click9(e)}/>
+                        <img  id = "까사피에스타" src = {casafiesta} className = {styles.item} onClick = {(e) => click9(e)}/>
                     </div>
                 </div>
                 <div className={styles.textline}>
                     <div className={styles.l}>위 선택지에 없는 배달 맛집이 있다면</div>
                     <div>알려주세요!</div>
                 </div>
-                {/* <form onSubmit={handleSubmit}>
-                    <label>
-                        <textarea type = "text" className={styles.input} onChange = {(e) => handleChange(e)}/>
-                    </label>
-                    <input type = "submit" value = "확인" className={styles.submit}/>
-                </form> */}
                 <div>
                     <label>
                         <textarea type = "text" className={styles.input} onChange = {(e) => handleChange(e)} onKeyPress = {(e) => onPress(e)}/>
